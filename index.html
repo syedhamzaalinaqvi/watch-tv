@@ -9,9 +9,9 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
-    #player {
-        display: none;
-
+   #player {
+	   width: 100%;
+        height:500px;
     }
     .player{
         width: 100%;
@@ -440,8 +440,10 @@ background-color: rgb(20, 20, 20);
 
 }
 .ads-container{
+	position: relative;
 	width:90%;
 	margin:auto;
+	overflow: hidden;
 }
 	    /*===============================================Custom plyer cnfrm*/
 	     /* Style for video container */
@@ -509,6 +511,8 @@ background-color: rgb(20, 20, 20);
             Chrome Browser to Play Channels</marquee>
 
     </div>
+
+	<!-- Adstera ad -->
 	<div class="ads-container">
 		<script type="text/javascript">
 	atOptions = {
@@ -522,7 +526,7 @@ background-color: rgb(20, 20, 20);
 </script>
 
 	</div>
-    <!-- Adstera ad -->
+    
         
     <!-- Player iframe -->
     <Div id="tv-wall">
