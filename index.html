@@ -443,6 +443,48 @@ background-color: rgb(20, 20, 20);
 	width:90%;
 	margin:auto;
 }
+	    /*===============================================Custom plyer cnfrm*/
+	     /* Style for video container */
+        #video-container {
+            width: 480px;
+            height: 360px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for video element */
+        #player {
+         /*   width: 100%;
+         height: 100%;*/
+        }
+
+        /* Style for controls */
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        /* Style for control buttons */
+        .video-controls button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+
+        /* Style for control button icons */
+        .video-controls button svg {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 
 
@@ -488,9 +530,14 @@ background-color: rgb(20, 20, 20);
         <div id="tv-container">
             <div id="monitor">
                 <div id="monitorscreen">
-			<!-- Clapr plyr-->
+			  <!-- HTML5 Video Tag -->
+        <video id="player" 
+                controls autoplay
+               src="https://buc01.jobdone.top:8088/live/webcricwillow/playlist.m3u8?vidictid=198089193211&id=120375&pk=01e2856d7a14ed4a4bf9ec4c89729954bf845775be69fa45c8271451a41ae79a" playsinline controls data-poster="/path/to/poster.jpg">
+        </video>
+			<!-- Clapr plyr
 			<div id="oper"></div>
-			<div id="vid"></div>
+			<div id="vid"></div>-->
                     <!-- Broadmax playr
 			<div class="player" id="PLAYER_DOM_ID"></div>-->
                     <!-- <iframe id="player" src="YOUR_VIDEO_URL_HERE"
@@ -501,7 +548,31 @@ background-color: rgb(20, 20, 20);
         </div>
     </Div>
 
-	<!--======= Claper  plyr-->
+	<!--======= Custom  plyr cnfrm-->	
+<script src="https://cdn.tutorialjinni.com/hls.js/1.2.1/hls.min.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
+	   <script type="text/javascript">
+          // ary = https://ythls.armelin.one/channel/UCMmpLL2ucRHAXbNHiCPyIyg.m3u8
+          //Tamasha = https://tencentscdn2.tamashaweb.com/v1/018ad584681c09831f17035dc819/018ad58586961eb401a60363c44c/main.m3u8?uuid=FFAAFFFF-d9b9-639a-258f-740a432146fa
+          //Sky Sports Cricket = https://buc02.jobdone.top:8088/live/webcricm04/playlist.m3u8?id=114515&pk=254d27480cc055be7d9d86797087eae8bfca3926c98bdbadb02c63d161ad041a1de04d6a13f716a1c45a38ae5ecf1ebd48ae578cac5d2a925d5140959aea6e0e
+          //Ary news = https://ythls.armelin.one/channel/UCMmpLL2ucRHAXbNHiCPyIyg.m3u8
+          //https://cat.zcast720.com:8034/view/hls/unT1UFsQkxtrAbZuOGosKw/1708952455/asports.m3u8
+            if (Hls.isSupported()) {
+              var video = document.getElementById('player');
+              var hls = new Hls();
+              hls.loadSource(video.src);
+              hls.attachMedia(video);
+            }else{
+                alert("Cannot stream HLS, use another video source");
+            }
+        </script>
+<script src="path/to/plyr.js"></script>
+<script>
+  const player = new Plyr('#player');
+</script>
+	<!--======= Claper  plyr
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
 <div id="oper"></div>
@@ -518,7 +589,7 @@ background-color: rgb(20, 20, 20);
   // sport ufc - http://117.55.202.141:80/Dee/NBUqYqXF9TSL/14969
   // https://nes05.jobdone.top:8088/live/webcricm05/playlist.m3u8?id=114516&pk=14d025402c8134edeb7b28faa748bceb88e7f38fb56aec14c33ae8b11d95909c0bf28fc614862e71101bb093a841ac73714cfbb518bf9a040d161f6f2ef7808b
   // a sports crichd = https://gpo.zcast720.com:8034/view/hls/WIjCOcDg-KTR8CCbuyqkFA/1709721919/asports.m3u8
-</script>
+</script>-->
 	<!--======= Broadmax plyr-->
 
 	<!-- <script src="https://bradmax.com/client/files/player-js/73a9716fd26717763cd2d46fb9e41463645853de_14815/bradmax_player.js" ></script>
