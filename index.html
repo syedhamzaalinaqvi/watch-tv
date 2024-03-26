@@ -496,11 +496,31 @@ background-color: rgb(20, 20, 20);
             </div>
         </div>
     </Div>
-<!--======= Broadmax plyr-->
-<script src="https://bradmax.com/client/files/player-js/73a9716fd26717763cd2d46fb9e41463645853de_14815/bradmax_player.js" ></script>
+
+	<!--======= Claper  plyr-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+<div id="oper"></div>
+<div id="vid"></div>
+<script>
+ player = new Clappr.Player({
+ source: "https://buc01.jobdone.top:8088/live/webcricwillow/playlist.m3u8?vidictid=198089193211&id=120375&pk=01e2856d7a14ed4a4bf9ec4c89729954bf845775be69fa45c8271451a41ae79a",
+ mimeType: "application/x-mpegURL",
+ autoPlay: true, 
+ height: "400",
+ width: "100%",
+ plugins: {"core": [LevelSelector]}, 
+ parentId: "#vid"});
+  // sport ufc - http://117.55.202.141:80/Dee/NBUqYqXF9TSL/14969
+  // https://nes05.jobdone.top:8088/live/webcricm05/playlist.m3u8?id=114516&pk=14d025402c8134edeb7b28faa748bceb88e7f38fb56aec14c33ae8b11d95909c0bf28fc614862e71101bb093a841ac73714cfbb518bf9a040d161f6f2ef7808b
+  // a sports crichd = https://gpo.zcast720.com:8034/view/hls/WIjCOcDg-KTR8CCbuyqkFA/1709721919/asports.m3u8
+</script>
+	<!--======= Broadmax plyr-->
+
+	<!-- <script src="https://bradmax.com/client/files/player-js/73a9716fd26717763cd2d46fb9e41463645853de_14815/bradmax_player.js" ></script>
 
 <script type="text/javascript">
-    var config = {
+    var config = { 
         dataProvider: {
             source: [
                 { url: "https://nes05.jobdone.top:8088/live/webcricn04/playlist.m3u8?vidictid=198085657535&id=114607&pk=01e2856d7a14ed4a4bf9ec4c89729954bf845775be69fa45c8271451a41ae79a86e84a7e08b612d84fc8285b40d7161674e1a1245ce4303ea92b0cbe7bc607f5" }
@@ -515,7 +535,10 @@ background-color: rgb(20, 20, 20);
 
     /** create player */
     var player = window.bradmax.player.create(element, config);
-</script>
+</script> -->
+
+
+	
     <!-- Font Awesome library for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         integrity="sha384-FsJO7jpj2UEL8Kv3IVUY9gt7K8Hhq+LWQtqE8P5mXvHzx0CKyfLQf3ZcdPNz8xyo"
